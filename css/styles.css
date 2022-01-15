@@ -1,0 +1,139 @@
+/* base element styles */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(0, 0%, 95%);
+  height: 100vh;
+}
+
+h2 {
+  font-family: 'Big Shoulders Display', cursive;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 95%);
+  font-size: 2.5em;
+}
+
+p {
+  font-family: 'Lexend Deca', sans-serif;
+  color: hsla(0, 0%, 100%, 0.75);
+  font-size: 15px;
+  line-height: 1.8em;
+}
+
+/* card styles */
+
+.main {
+  width: 95vw;
+  max-width: 330px;
+  margin: auto;
+  padding: 10px 0;
+}
+
+.main__card {
+  padding: 50px;
+}
+
+.main__card--sedan {
+  background-color: hsl(31, 77%, 52%);
+  border-radius: 10px 10px 0 0;
+}
+
+.main__card--suv {
+  background-color: hsl(184, 100%, 22%);
+}
+
+.main__card--luxury {
+  background-color: hsl(179, 100%, 13%);
+  border-radius: 0 0 10px 10px;
+}
+
+/* button styles */
+
+.main__card__btn {
+  background-color: hsl(0, 0%, 95%);
+  border: solid 2px;
+  border-radius: 50px;
+  padding: 14px 32px;
+  margin-top: 5px;
+  font-family: 'Lexend Deca', sans-serif;
+  text-transform: capitalize;
+  transition: color .2s ease-in-out, background-color .2s ease-in-out;
+}
+
+.main__card__btn--sedan {
+  color: hsl(31, 77%, 52%);
+}
+
+.main__card__btn--sedan:hover {
+  cursor: pointer;
+  background-color: hsl(31, 77%, 52%);
+  color: hsl(0, 0%, 95%);
+  border: solid 2px hsl(0, 0%, 95%);
+}
+
+.main__card__btn--suv {
+  color: hsl(184, 100%, 22%);
+}
+
+.main__card__btn--suv:hover {
+  cursor: pointer;
+  background-color: hsl(184, 100%, 22%);
+  color: hsl(0, 0%, 95%);
+  border: solid 2px hsl(0, 0%, 95%);
+}
+
+.main__card__btn--luxury {
+  color: hsl(179, 100%, 13%);
+}
+
+.main__card__btn--luxury:hover {
+  cursor: pointer;
+  background-color: hsl(179, 100%, 13%);
+  color: hsl(0, 0%, 95%);
+  border: solid 2px hsl(0, 0%, 95%);
+}
+
+/* attribution styles */
+
+/* .attribution {
+  font-size: 11px; text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+} */
+
+/* media query for tablet and desktop layout */
+
+@media (min-width: 768px) {
+
+  body {
+    display: grid;
+    grid-template-columns: auto repeat(3, 310px) auto;
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .main {
+    display: grid;
+    grid-template-columns: repeat(3, 310px);
+    grid-column: 2/3;
+    grid-row: 2/3;
+    padding: 0;
+  }
+
+  .main__card--sedan {
+    border-radius: 10px 0 0 10px;
+  }
+
+  .main__card--luxury {
+    border-radius: 0 10px 10px 0;
+  }
+
+  .main__card__btn {
+    margin-top: 60px;
+  }
+
+}
