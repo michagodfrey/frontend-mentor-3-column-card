@@ -50,47 +50,54 @@ p {
   border-radius: 0 0 10px 10px;
 }
 
-/* button styles */
+/* more info link styles */
 
-.card__btn {
+.card__link {
   background-color: hsl(0, 0%, 95%);
   border: solid 2px hsl(0, 0%, 95%);
   border-radius: 50px;
   padding: 14px 32px;
-  margin-top: 5px;
+  margin-top: 2rem;
+  height: 50px;
+  width: 160px;
   font-family: 'Lexend Deca', sans-serif;
+  cursor: pointer;
   text-transform: capitalize;
   transition: color .2s ease-in-out, background-color .2s ease-in-out;
 }
 
-.card__btn--sedan {
+.card__link a {
+  text-decoration: inherit;
+}
+
+.card__link:hover a {
+  color: hsl(0, 0%, 95%);
+}
+
+.card__link--sedan a {
   color: hsl(31, 77%, 52%);
 }
 
-.card__btn--sedan:hover {
-  cursor: pointer;
+.card__link--sedan:hover {
   background-color: hsl(31, 77%, 52%);
-  color: hsl(0, 0%, 95%);
   border: solid 2px hsl(0, 0%, 95%);
 }
 
-.main__card__btn--suv {
+.card__link--suv a {
   color: hsl(184, 100%, 22%);
 }
 
-.card__btn--suv:hover {
-  cursor: pointer;
+.card__link--suv:hover {
   background-color: hsl(184, 100%, 22%);
   color: hsl(0, 0%, 95%);
   border: solid 2px hsl(0, 0%, 95%);
 }
 
-.card__btn--luxury {
+.card__link--luxury a {
   color: hsl(179, 100%, 13%);
 }
 
-.card__btn--luxury:hover {
-  cursor: pointer;
+.card__link--luxury:hover {
   background-color: hsl(179, 100%, 13%);
   color: hsl(0, 0%, 95%);
   border: solid 2px hsl(0, 0%, 95%);
@@ -127,10 +134,6 @@ p {
 
   .card--luxury {
     border-radius: 0 10px 10px 0;
-  }
-
-  .card__btn {
-    margin-top: 60px;
   }
 
 }
